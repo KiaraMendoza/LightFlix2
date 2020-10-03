@@ -19,7 +19,7 @@ const login = (e, users, loggedUser) => {
         console.log('Incorrect data.');
     } else {
         console.log(`Everything OK, welcome again ${findUser.name}`);
-        window.localStorage.setItem('loggedUser', JSON.stringify(findUser));
+        window.sessionStorage.setItem('loggedUser', JSON.stringify(findUser));
         window.location = 'userPage.html';
         return findUser;
     }

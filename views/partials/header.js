@@ -1,20 +1,17 @@
 export const Header = {
-    render: (page) => {
+    render: (loggedUser) => {
         let menu;
-        switch (page) {
-            // I will use the same menu listing when the user isn't logged in.
-            case 'userPage.html':
-                menu = `                
-                    <li class="nav-item"><a class="nav-link navbar-brand" href="./index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./login.html">Logout</a></li>`
-                break
-            default:
-                menu = `
-                    <li class="nav-item"><a class="navbar-brand nav-link" href="./index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./register.html">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./help.html">Help</a></li>`
-                break
+        if (loggedUser) {
+            menu = `                
+                    <li class="nav-item"><a class="nav-link navbar-brand" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link navbar-brand" href="/views/userPage.html">Movies</a></li>
+                    <li id="logout_button" class="nav-item"><a class="nav-link" href="/views/login.html">Logout</a></li>`;
+        } else {
+            menu = `
+                    <li class="nav-item"><a class="navbar-brand nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/views/login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/views/register.html">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/views/help.html">Help</a></li>`
         }
         return `
             <div class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">

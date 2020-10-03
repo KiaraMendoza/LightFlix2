@@ -9,7 +9,7 @@ const app = async () => {
     let storeUsers = 'users';
     let moviePage = 1;
     // Get the logged user if there is any
-    let loggedUser = window.localStorage.getItem('loggedUser') ? JSON.parse(window.localStorage.getItem('loggedUser')) : null;
+    let loggedUser = window.sessionStorage.getItem('loggedUser') ? JSON.parse(window.sessionStorage.getItem('loggedUser')) : null;
     // Get the users from the localStorage.
     const users = window.localStorage.getItem(storeUsers) ? JSON.parse(window.localStorage.getItem(storeUsers)) : [];
 
@@ -25,7 +25,7 @@ const app = async () => {
         loginButton.addEventListener('click', (e) => login(e, users, loggedUser) )
     }
     if (logoutButton) {
-        logoutButton.addEventListener('click', () => { loggedUser = null; window.location = 'login.html'; });
+        logoutButton.addEventListener('click', () => { loggedUser = null; console.log('logout'); window.sessionStorage.clear(); });
     }
     if (loadMoreMovies) {
         loadMoreMovies.addEventListener('click', async () => { moviePage += 1; let moviesData = await fetchMovies(loggedUser, moviePage); renderMovies(moviesData) });
