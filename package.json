@@ -1,0 +1,23 @@
+{
+  "name": "lightflix2",
+  "version": "1.0.0",
+  "description": "A website to check the last published movies",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KiaraMendoza/LightFlix2.git"
+  },
+  "keywords": [
+    "Movies",
+    "LightFlix"
+  ],
+  "author": "Kiara",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KiaraMendoza/LightFlix2/issues"
+  },
+  "homepage": "https://github.com/KiaraMendoza/LightFlix2#readme"
+}
