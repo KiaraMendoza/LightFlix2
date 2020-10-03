@@ -1,7 +1,7 @@
 export const Header = {
     render: (loggedUser) => {
         let menu;
-        if (loggedUser) {
+        if (loggedUser && loggedUser.email) {
             menu = `                
                     <li class="nav-item"><a class="nav-link navbar-brand" href="/index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link navbar-brand" href="/views/userPage.html">Movies</a></li>
