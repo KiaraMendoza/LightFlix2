@@ -20,7 +20,7 @@ const register = (e, storeUsers, users) => {
 
     window.localStorage.setItem(storeUsers, JSON.stringify(users));
     inputs.forEach(item => item.value = '');
-    if (user) {
+    if (user && user.email && user.apiKey) {
         window.location = 'login.html';
     }
 }

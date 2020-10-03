@@ -2,6 +2,7 @@ export const Header = {
     render: (loggedUser) => {
         let menu;
         if (loggedUser && loggedUser.email) {
+            console.log(loggedUser)
             menu = `                
                     <li class="nav-item"><a class="nav-link navbar-brand" href="/index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link navbar-brand" href="/LightFlix2/views/userPage.html">Movies</a></li>
