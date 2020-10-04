@@ -1,7 +1,7 @@
 import validate from './validate.js';
 
 const register = (e, storeUsers, users) => {
-    // e.preventDefault();
+    e.preventDefault();
     const registerForm = document.querySelector('#register_form');
     if (!validate(registerForm)) {
         return;
