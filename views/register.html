@@ -34,12 +34,21 @@
                 <input type="text" class="form-control" id="name" placeholder="Valid name" required>
             </div>
             <div class="form-group">
-                <label for="gender">Gender</label>
-                <select name="gender" class="form-control"  required>
-                    <option value="man">Man</option>
-                    <option value="man">Woman</option>
-                    <option value="man">Other</option>
-                </select>
+                <label>Gender</label>
+                <div class="d-flex align-items-center ml-4">
+                    <div class="d-flex align-items-center mr-5">
+                        <input class="form-control" type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="d-flex align-items-center mr-5">
+                        <input class="form-control" type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <input class="form-control" type="radio" id="other" name="gender" value="other" default>
+                        <label for="other">Other</label>
+                    </div>
+                </div>
             </div>
             <div class="form-group">
                 <label for="mobile">Mobile</label>
