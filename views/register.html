@@ -48,31 +48,20 @@
             <div class="form-group">
                 <label for="nationality">Nationality</label>
                 <select name="nationality" class="form-control" id="nationality-select" required>
+                    <option value="null" disabled selected></option>
                     <option value="spain">Spain / Spanish</option>
                     <option value="eu">European Union</option>
                     <option value="other">Other</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="form-group d-none">
                 <label for="community">Autonomous Community</label>
-                <select name="community" class="form-control" required>
-                    <option value="andalucia">Andalucia</option>
-                    <option value="aragon">Aragon</option>
-                    <option value="asturias">Asturias</option>
-                    <option value="canarias">Islas Canarias</option>
-                    <option value="cantabria">Cantabria</option>
-                    <option value="castilla-mancha">Castilla-La Mancha</option>
-                    <option value="castilla-leon">Castilla y León</option>
-                    <option value="cataluña">Cataluña</option>
-                    <option value="madrid">Comunidad de Madrid</option>
-                    <option value="valencia">Comunidad Valenciana</option>
-                    <option value="extremadura">Extremadura</option>
-                    <option value="galicia">Galicia</option>
-                    <option value="baleares">Islas Baleares</option>
-                    <option value="rioja">La Rioja</option>
-                    <option value="navarra">Navarra</option>
-                    <option value="pais-vasco">País Vasco</option>
-                    <option value="region-murcia">Región de Murcia</option>
+                <select name="community" id="communities-select" class="form-control" required>
+                </select>
+            </div>
+            <div class="form-group d-none">
+                <label for="city">City</label>
+                <select name="city" id="cities-select" class="form-control" required>
                 </select>
             </div>
             <div class="form-group">
@@ -90,6 +79,7 @@
             <div class="form-group text-center">
                 <button id="register_button" class="btn btn-primary" type="submit">Register</button>
             </div>
+            <p id="error-message"></p>
         </form>
     </main>
     <footer></footer>
